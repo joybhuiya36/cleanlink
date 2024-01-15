@@ -1,122 +1,74 @@
 import React from "react";
 import "./index.scss";
-import Button from "../Button";
-import Image from "next/image";
-import line from "@/../public/assets/images/line.png";
-import Icon from "../TickIcon";
-import { Josefin_Sans } from "next/font/google";
+import PricingCart from "../PricingCart";
 
-const josefin_sans = Josefin_Sans({ subsets: ["latin"] });
-type Props = {};
+type Props = {
+  header: {
+    title: string;
+    heading: string;
+    description: string;
+  };
+  packageData: {
+    packageName: string;
+    packageTag?: string;
+    packageFor: string;
+    priceDescription: string;
+    price: number;
+    facility: string;
+    style: string;
+  }[];
+};
 
-const Pricing = (props: Props) => {
+const Pricing = ({ header, packageData }: Props) => {
   return (
     <div className="pricing">
       <div className="pricing__header">
-        <span className="pricing__header__title">Pricing</span>
+        <span className="pricing__header__title">{header.title}</span>
         <div className="pricing__header__text">
-          <h3 className="pricing__header__heading">Our Price</h3>
-          <p className="pricing__header__para">
-            Projectile helps you collaborate more smoothly and communicate
-            better. Projectile helps you collaborate more smoothly and
-            communicate better.
-          </p>
+          <h3 className="pricing__header__heading">{header.heading}</h3>
+          <p className="pricing__header__description">{header.description}</p>
         </div>
       </div>
       <div className="pricing__body">
-        <div className="pricing__body__cart pricing--cart-left">
-          <div className="pricing__body__price">
-            <div>
-              <h3 className="pricing__body__package">Standard</h3>
-              <p className="pricing__body__package-para">For solo designer</p>
-            </div>
-            <Image src={line} alt="Line" width={276} height={2} />
-            <div>
-              <div className="pricing__price">
-                <span className="pricing__price-dollar">$</span>
-                <h1 className="pricing__price-usd">29 USD</h1>
-              </div>
-              <p className="pricing__price-para">per person, per month</p>
-            </div>
-          </div>
-          <div className="pricing__body__features">
-            <Lorem color="#398378" />
-            <Lorem color="#398378" />
-            <Lorem color="#398378" />
-          </div>
-          <Button
-            name="Get Started"
-            className={`pricing__body__button ${josefin_sans.className}`}
+        {packageData.map((pricePackage, idx) => (
+          <PricingCart
+            packageName={pricePackage.packageName}
+            packageTag={pricePackage.packageTag}
+            packageFor={pricePackage.packageFor}
+            priceDescription={pricePackage.priceDescription}
+            price={pricePackage.price}
+            facility={pricePackage.facility}
+            style={pricePackage.style}
           />
-        </div>
-
-        <div className="pricing__body__cart">
-          <div className="pricing__body__price">
-            <div>
-              <div className="pricing__premium">
-                <h3 className="pricing__body__package">Premium</h3>
-                <span className="pricing__premium-text">most popular</span>
-              </div>
-              <p className="pricing__body__package-para">
-                For small startup and agency
-              </p>
-            </div>
-            <Image src={line} alt="Line" width={276} height={2} />
-            <div>
-              <div className="pricing__price">
-                <span className="pricing__price-dollar">$</span>
-                <h1 className="pricing__price-usd">99 USD</h1>
-              </div>
-              <p className="pricing__price-para">per person, per month</p>
-            </div>
-          </div>
-          <div className="pricing__body__features">
-            <Lorem color="#fff" />
-            <Lorem color="#fff" />
-            <Lorem color="#fff" />
-          </div>
-          <Button
-            name="Get Started"
-            className={`pricing__body__button ${josefin_sans.className}`}
-          />
-        </div>
-
-        <div className="pricing__body__cart pricing--cart-right">
-          <div className="pricing__body__price">
-            <div>
-              <h3 className="pricing__body__package">Standard</h3>
-              <p className="pricing__body__package-para">For solo designer</p>
-            </div>
-            <Image src={line} alt="Line" width={276} height={2} />
-            <div>
-              <div className="pricing__price">
-                <span className="pricing__price-dollar">$</span>
-                <h1 className="pricing__price-usd">29 USD</h1>
-              </div>
-              <p className="pricing__price-para">per person, per month</p>
-            </div>
-          </div>
-          <div className="pricing__body__features">
-            <Lorem color="#398378" />
-            <Lorem color="#398378" />
-            <Lorem color="#398378" />
-          </div>
-          <Button
-            name="Get Started"
-            className={`pricing__body__button ${josefin_sans.className}`}
-          />
-        </div>
+        ))}
+        {/* <PricingCart
+          packageName="Standard"
+          packageFor="For solo designer"
+          priceDescription="per person, per month"
+          price={29}
+          facility="lorem ipsum dummu text"
+          style="pricing--cart-left"
+        />
+        <PricingCart
+          packageName="Premium"
+          packageTag="Most Popular"
+          packageFor="For small startup and agency"
+          priceDescription="per person, per month"
+          price={99}
+          facility="lorem ipsum dummu text"
+          style=""
+        />
+        <PricingCart
+          packageName="Standard"
+          packageFor="For solo designer"
+          priceDescription="per person, per month"
+          price={29}
+          facility="lorem ipsum dummu text"
+          style="pricing--cart-right"
+        /> */}
       </div>
     </div>
   );
 };
 
-const Lorem = (props: { color: string }) => {
-  return (
-    <div className="pricing__features__element">
-      <Icon color={props.color} />
-      <p className="pricing__features__element-para">lorem ipsum dummu text</p>
-    </div>
-  );
-};
 export default Pricing;

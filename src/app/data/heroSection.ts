@@ -11,6 +11,14 @@ export const heroButton = {
     icon: "/assets/images/arrow.svg",
   };
 export const heroImages = {
-    heroImage: "/assets/images/dashboard.png",
-    backgroundImage: "/assets/images/BG_Pattern_1.png",
+    heroImage: {
+      link: "/assets/images/dashboard.png",
+      height: 327,
+      width: 569
+    },
+    backgroundImage: {
+      link: "/assets/images/BG_Pattern_1.png",
+      height: 791,
+      width: 802
+    }
   };

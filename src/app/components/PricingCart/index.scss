@@ -1,0 +1,118 @@
+@use "/src/app/styles/colors" as *;
+
+.pricing-cart__body__cart {
+    display: flex;
+    padding: 64px 48px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    background: $gray-color;
+
+    &:hover {
+        cursor: pointer;
+        padding: 96px 48px;
+        border: 1px solid $solid-white;
+        background: $cooper-green;
+        box-shadow: 0px 60px 80px -44px rgba(15, 35, 85, 0.12);
+        border-radius: 24px;
+    }
+    &:hover .pricing-cart__body__button {
+        border: 1px solid $solid-white;
+    }
+    &:hover .pricing-cart__premium-text {
+        background: $dark-color;
+    }
+}
+
+.pricing-cart__body__package {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+.pricing-cart__body__packageName {
+    color: $solid-white;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px;
+}
+.pricing-cart__premium {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.pricing-cart__premium-text {
+    display: flex;
+    padding: 6px 8px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 4px;
+    color: $solid-white;
+    background-color: $cooper-green;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 12px;
+    text-transform: uppercase;
+}
+.pricing-cart__body__package-description {
+    color: $solid-white;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    opacity: 0.8;
+}
+.pricing-cart__price {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+}
+.pricing-cart__price-dollar {
+    color: $solid-white;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.24px;
+}
+.pricing-cart__price-usd {
+    color: $solid-white;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.4px;
+}
+.pricing-cart__price-description {
+    color: $solid-white;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+.pricing-cart__body__features {
+    display: flex;
+    width: 277px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.pricing-cart__body__button {
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 14px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+    background: $cooper-green;
+    color: $solid-white;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+}

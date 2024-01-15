@@ -13,9 +13,17 @@ import Testimonial from "./components/Testimonial";
 import { logo, menuItems, headerButtons } from "./data/header";
 import { heroHeader, heroButton, heroImages } from "./data/heroSection";
 import { integrationHeader, integrationLogos } from "./data/integration";
+import { packageData, pricingHeader } from "./data/pricing";
 
 const jost = Jost({ subsets: ["latin"] });
 export default function Home() {
+  const featureHeader = {
+    title: "Features",
+    heading: "Get complete visibility and control",
+    description:
+      "Projectile helps you collaborate more smoothly and communicate better.",
+  };
+
   return (
     <main className={`${styles.main} ${jost.className}`}>
       <Header menuItems={menuItems} buttons={headerButtons} logo={logo} />
@@ -25,8 +33,8 @@ export default function Home() {
         images={heroImages}
       />
       <Integration header={integrationHeader} logos={integrationLogos} />
-      <Feature />
-      <Pricing />
+      <Feature header={featureHeader} />
+      <Pricing header={pricingHeader} packageData={packageData} />
       <Key />
       <Testimonial />
       <Customer />

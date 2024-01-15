@@ -15,8 +15,16 @@ type heroType = {
     icon: string;
   };
   images: {
-    heroImage: string;
-    backgroundImage: string;
+    heroImage: {
+      link: string;
+      height: number;
+      width: number;
+    };
+    backgroundImage: {
+      link: string;
+      height: number;
+      width: number;
+    };
   };
 };
 const josefin_sans = Josefin_Sans({ subsets: ["latin"] });
@@ -46,18 +54,18 @@ const HeroSection = ({ header, button, images }: heroType) => {
       </div>
 
       <Image
-        src={images.heroImage}
+        src={images.heroImage.link}
         alt="Hero Image"
         className="hero__bg2"
-        width={569}
-        height={327}
+        width={images.heroImage.width}
+        height={images.heroImage.height}
       />
       <Image
-        src={images.backgroundImage}
+        src={images.backgroundImage.link}
         alt="Background"
         className="hero__bg1"
-        width={802}
-        height={791}
+        width={images.backgroundImage.width}
+        height={images.backgroundImage.height}
       />
     </div>
   );

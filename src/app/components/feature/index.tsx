@@ -8,31 +8,30 @@ import PenIcon from "../PenIcon";
 import CartIcon from "../CardIcon";
 import CircleIcon from "../CircleIcon";
 
-type Props = {};
+type Props = {
+  header: {
+    title: string;
+    heading: string;
+    description: string;
+  };
+};
 
-const Feature = (props: Props) => {
+const Feature = ({ header }: Props) => {
   return (
     <div className="feature">
       <div className="feature__content">
-        <span className="feature__content__title">Features</span>
+        <span className="feature__content__title">{header.title}</span>
         <div className="feature__content__text">
-          <h3 className="feature__content__header">
-            Get complete visibility and control
-          </h3>
-          <p className="feature__content__para">
-            Projectile helps you collaborate more smoothly and communicate
-            better.
-          </p>
+          <h3 className="feature__content__header">{header.heading}</h3>
+          <p className="feature__content__description">{header.description}</p>
         </div>
       </div>
-      <div className="feature__row">
+      <div className="feature__carts-wrapper">
         <FeatureCart icon={PenIcon} header="Customer management" />
-        <FeatureCart icon={CartIcon} header="Quotes and estimates" />
-        <FeatureCart icon={CircleIcon} header="Referrals and reviews" />
-      </div>
-      <div className="feature__row">
         <FeatureCart icon={PenIcon} header="Scheduling" />
+        <FeatureCart icon={CartIcon} header="Quotes and estimates" />
         <FeatureCart icon={CartIcon} header="Credit card payment" />
+        <FeatureCart icon={CircleIcon} header="Referrals and reviews" />
         <FeatureCart icon={CircleIcon} header="Billing and invoicing" />
       </div>
       <Image src={BGImage} alt="BG Image" className="feature__bg" />

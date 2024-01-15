@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 
 type Props = {
@@ -11,12 +12,18 @@ type Props = {
 };
 
 const Button = (props: Props) => {
+  const [buttonIcon, setButtonIcon] = useState<any>(undefined);
+  console.log(props.icon);
   return (
-    <button className={props?.className}>
+    <button
+      className={props?.className}
+      onMouseOver={() => setButtonIcon(props.icon)}
+      onMouseLeave={() => setButtonIcon(undefined)}
+    >
       <span>{props.name}</span>
-      {props?.icon && (
+      {props?.icon != undefined && buttonIcon != undefined && (
         <Image
-          src={`${props?.icon}`}
+          src={buttonIcon}
           alt="icon"
           width={props.width}
           height={props.height}
