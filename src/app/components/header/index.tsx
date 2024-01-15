@@ -1,17 +1,18 @@
 "use client";
 import Image from "next/image";
 import { Jost, Josefin_Sans } from "next/font/google";
-import logo from "@/../public/assets/images/logo.png";
 import "./index.scss";
 import Link from "next/link";
 import Button from "../Button";
 import { IoMdMenu } from "react-icons/io";
 import MenuModal from "../MenuModal";
 import { useState } from "react";
+import { headerType } from "@/app/types/header.type";
 
 const jost = Jost({ subsets: ["latin"] });
 const josefin_sans = Josefin_Sans({ subsets: ["latin"] });
-const Header = () => {
+
+const Header = ({ menuItems, buttons, logo }: headerType) => {
   const [isModalOpen, setModalOpen] = useState<boolean>(false);
   const closeModal = () => {
     setModalOpen(false);
@@ -19,8 +20,14 @@ const Header = () => {
   return (
     <nav className="nav">
       <div className="nav__logo">
-        <Image src={logo} alt="CleanLink Logo" className="nav__logo-image" />
-        <span className="nav__logo-text">Cleanlist</span>
+        <Image
+          src={logo.image}
+          alt={logo.text}
+          className="nav__logo-image"
+          height={42}
+          width={43}
+        />
+        <span className="nav__logo-text">{logo.text}</span>
       </div>
       <div className="nav__menu-bar-mobile">
         <div onClick={() => setModalOpen(true)}>
@@ -30,24 +37,18 @@ const Header = () => {
           {isModalOpen && <MenuModal closeModal={closeModal} />}
         </div>
       </div>
-      <div className={`nav__links `}>
+      <div className="nav__links">
         <div>
-          <Link href="/" className="nav__link">
-            Home
-          </Link>
-          <Link href="/" className="nav__link">
-            About us
-          </Link>
-          <Link href="/" className="nav__link">
-            Pricing
-          </Link>
-          <Link href="/" className="nav__link">
-            Contact
-          </Link>
+          {menuItems.map((menuItem) => (
+            <Link href={menuItem.link} className="nav__link">
+              {menuItem.item}
+            </Link>
+          ))}
         </div>
         <div className="nav__button">
-          <Button name="Sign Up" className={`nav__signup `} />
-          <Button name="Demo" className={`nav__demo `} />
+          {buttons.map((button) => (
+            <Button name={button.name} className={button.style} />
+          ))}
         </div>
       </div>
     </nav>

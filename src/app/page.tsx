@@ -10,31 +10,32 @@ import Customer from "./components/Customer";
 import TrySection from "./components/TrySection";
 import Footer from "./components/Footer";
 import Testimonial from "./components/Testimonial";
+import { logo, menuItems, headerButtons } from "./data/header";
+import { heroHeader, heroButton, heroImages } from "./data/heroSection";
 
 const jost = Jost({ subsets: ["latin"] });
 export default function Home() {
-  const menuItems = [
-    {
-      item: "",
-      link: "",
-    },
-    {
-      item: "",
-      link: "",
-    },
-    {
-      item: "",
-      link: "",
-    },
-    {
-      item: "",
-      link: "",
-    },
-  ];
+  // const integrationHeader= {
+  //   title:"",
+  //   heading: "",
+  //   logos: [
+  //     "","","",""
+  //   ]
+  // }
+  // const integrationLogos= {
+  //   link: "",
+  //   name: "",
+  //   width: ,
+  //   height:
+  // }
   return (
     <main className={`${styles.main} ${jost.className}`}>
-      <Header />
-      <HeroSection />
+      <Header menuItems={menuItems} buttons={headerButtons} logo={logo} />
+      <HeroSection
+        heroHeader={heroHeader}
+        button={heroButton}
+        images={heroImages}
+      />
       <Integration />
       <Feature />
       <Pricing />

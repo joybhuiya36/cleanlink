@@ -3,10 +3,17 @@ import "./index.scss";
 import { Inter } from "next/font/google";
 import Image from "next/image";
 
-type Props = {};
+type integrationType = {
+  // integrationLogos= {
+  //   link: "",
+  //   name: "",
+  //   width: ,
+  //   height:
+  // }
+};
 const inter = Inter({ subsets: ["latin"] });
 
-const Integration = (props: Props) => {
+const Integration = (props: integrationType) => {
   return (
     <div className="integration">
       <div className="integration__header">
