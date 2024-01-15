@@ -1,0 +1,103 @@
+@use "/src/app/styles/colors" as *;
+
+.nav {
+    height: 103.64px;
+    padding: 30px, 135px, 30px, 135px;
+    display: flex;
+    justify-content: space-between;
+    gap: 480.19px;
+    z-index: 10;
+}
+.nav__menu-bar-mobile {
+    display: none;
+}
+.nav__logo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.nav__logo-text {
+    color: $solid-white;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+}
+.nav__links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.nav__link {
+    margin-left: 40px;
+    text-decoration: none;
+    color: $solid-white;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+}
+.nav__button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 60px;
+}
+.nav__signup {
+    border: none;
+    display: flex;
+    padding: 10px 14px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+    background: $cooper-green;
+    color: $solid-white;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0px 10px 60px 0px rgba(57, 131, 120, 0.5);
+    }
+}
+.nav__demo {
+    display: flex;
+    padding: 10px 14px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 2px solid $solid-white;
+    background-color: transparent;
+    color: $solid-white;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0px 10px 60px 0px rgba(57, 131, 120, 0.5);
+    }
+}
+@media screen and (max-width: 428px) {
+    .nav {
+        padding: 0 15px;
+        gap: 35vw;
+        text-align: center;
+        align-items: center;
+    }
+
+    .nav__logo {
+        margin-bottom: 10px;
+        flex: 1;
+    }
+    .nav__menu-bar-mobile {
+        display: block;
+        color: $solid-white;
+        font-size: 2em;
+        cursor: pointer;
+    }
+    .nav__links {
+        display: none;
+    }
+}

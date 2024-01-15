@@ -1,0 +1,103 @@
+@use "/src/app/styles/colors" as *;
+
+.integration {
+    display: flex;
+    margin: 0;
+    padding: 100px 135px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+}
+.integration__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.integration__title {
+    display: flex;
+    padding: 5px 10px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 20px;
+    background: $cooper-green;
+    color: $solid-white;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+.integration__text {
+    color: $solid-white;
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50px;
+}
+.integration__logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+@media screen and (max-width: 428px) {
+    .integration {
+        display: flex;
+        margin: 0 auto;
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        align-self: stretch;
+        max-width: 95vw;
+    }
+    .integration__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 95vw;
+    }
+    .integration__title {
+        display: flex;
+        padding: 5px 10px;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 20px;
+        background: $cooper-green;
+        color: $solid-white;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 1px;
+    }
+    .integration__text {
+        width: 90%;
+        color: $solid-white;
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 30px;
+    }
+    .integration__logos {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0 10vw;
+        gap: 2vw;
+        align-items: flex-start;
+        align-self: stretch;
+    }
+    .integration__logo-image {
+        width: 4em;
+        object-fit: contain;
+    }
+}

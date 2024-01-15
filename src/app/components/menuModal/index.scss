@@ -1,0 +1,91 @@
+@use "/src/app/styles/colors" as *;
+
+.menu {
+    display: none;
+}
+
+@media screen and (max-width: 428px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 5;
+        padding-top: 60px;
+        width: 100vw;
+        background-color: $solid-white;
+        animation: slide 0.5s ease;
+    }
+
+    @keyframes slide {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    .menu__close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        color: $dark-color;
+        cursor: pointer;
+    }
+    .menu__links {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .menu__link {
+        text-decoration: none;
+        color: $dark-color;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px;
+    }
+    .menu__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 2px solid rgb(0, 0, 0, 0.2);
+        margin: 0 20%;
+        gap: 40px;
+        height: 60px;
+    }
+    .menu__signup {
+        border: none;
+        display: flex;
+        padding: 10px 14px;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        border-radius: 8px;
+        background: $cooper-green;
+        color: $solid-white;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px;
+        cursor: pointer;
+    }
+    .menu__demo {
+        display: flex;
+        padding: 10px 14px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        background: $cooper-green;
+        color: $solid-white;
+        border: none;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 18px;
+        cursor: pointer;
+    }
+}
