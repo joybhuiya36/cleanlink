@@ -12,31 +12,19 @@ import Footer from "./components/Footer";
 import Testimonial from "./components/Testimonial";
 import { logo, menuItems, headerButtons } from "./data/header";
 import { heroHeader, heroButton, heroImages } from "./data/heroSection";
+import { integrationHeader, integrationLogos } from "./data/integration";
 
 const jost = Jost({ subsets: ["latin"] });
 export default function Home() {
-  // const integrationHeader= {
-  //   title:"",
-  //   heading: "",
-  //   logos: [
-  //     "","","",""
-  //   ]
-  // }
-  // const integrationLogos= {
-  //   link: "",
-  //   name: "",
-  //   width: ,
-  //   height:
-  // }
   return (
     <main className={`${styles.main} ${jost.className}`}>
       <Header menuItems={menuItems} buttons={headerButtons} logo={logo} />
       <HeroSection
-        heroHeader={heroHeader}
+        header={heroHeader}
         button={heroButton}
         images={heroImages}
       />
-      <Integration />
+      <Integration header={integrationHeader} logos={integrationLogos} />
       <Feature />
       <Pricing />
       <Key />

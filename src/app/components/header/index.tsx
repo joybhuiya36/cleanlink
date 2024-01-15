@@ -7,8 +7,22 @@ import Button from "../Button";
 import { IoMdMenu } from "react-icons/io";
 import MenuModal from "../MenuModal";
 import { useState } from "react";
-import { headerType } from "@/app/types/header.type";
 
+type headerType = {
+  menuItems: {
+    item: string;
+    link: string;
+  }[];
+  buttons: {
+    name: string;
+    link: string;
+    style: string;
+  }[];
+  logo: {
+    image: string;
+    text: string;
+  };
+};
 const jost = Jost({ subsets: ["latin"] });
 const josefin_sans = Josefin_Sans({ subsets: ["latin"] });
 
