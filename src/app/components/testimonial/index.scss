@@ -53,15 +53,18 @@
     line-height: 32.04px;
 }
 .testimonial__carts {
+    position: relative;
     display: inline-flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
-    gap: 42px;
-}
-.testimonial__carts__row {
-    display: flex;
-    align-items: flex-start;
+    flex-wrap: wrap;
     gap: 15px;
+}
+.testimonial__carts__gradient {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, $dark-color 15%, rgba(255, 255, 255, 0) 70%);
 }
 .testimonial__button {
     display: flex;

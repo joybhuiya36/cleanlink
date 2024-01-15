@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import FeatureCart from "../featureCart";
+import FeatureCart from "../FeatureCart";
 import "./index.scss";
 import BGImage from "@/../public/assets/images/BG_Pattern_2.png";
 import Image from "next/image";
-import PenIcon from "../penIcon";
-import CartIcon from "../cardIcon";
-import CircleIcon from "../circleIcon";
+import PenIcon from "../PenIcon";
+import CartIcon from "../CardIcon";
+import CircleIcon from "../CircleIcon";
 
 type Props = {};
 

@@ -3,7 +3,7 @@ import Link from "next/link";
 import "./index.scss";
 import { IoClose } from "react-icons/io5";
 
-import Button from "../button";
+import Button from "../Button";
 
 type Props = {
   closeModal: () => void;

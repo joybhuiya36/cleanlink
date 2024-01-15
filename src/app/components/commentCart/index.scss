@@ -11,6 +11,9 @@
     flex-direction: column;
     gap: 15px;
 }
+.comment-cart__wrapper {
+    height: 80px;
+}
 .comment-cart__comment {
     max-width: 306px;
     color: $solid-black;
@@ -20,6 +23,7 @@
     line-height: 24px;
 }
 .comment-cart__line {
+    margin-top: 12px;
     width: 84px;
     height: 1px;
     background: linear-gradient(90deg, #666 0%, rgba(102, 102, 102, 0) 93.75%);

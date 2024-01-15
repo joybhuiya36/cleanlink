@@ -1,9 +1,9 @@
 import React from "react";
 import "./index.scss";
-import Button from "../button";
+import Button from "../Button";
 import Image from "next/image";
 import line from "@/../public/assets/images/line.png";
-import Icon from "../tickIcon";
+import Icon from "../TickIcon";
 import { Josefin_Sans } from "next/font/google";
 
 const josefin_sans = Josefin_Sans({ subsets: ["latin"] });

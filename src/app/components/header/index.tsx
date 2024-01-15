@@ -4,9 +4,9 @@ import { Jost, Josefin_Sans } from "next/font/google";
 import logo from "@/../public/assets/images/logo.png";
 import "./index.scss";
 import Link from "next/link";
-import Button from "../button";
+import Button from "../Button";
 import { IoMdMenu } from "react-icons/io";
-import MenuModal from "../menuModal";
+import MenuModal from "../MenuModal";
 import { useState } from "react";
 
 const jost = Jost({ subsets: ["latin"] });

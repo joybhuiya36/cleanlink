@@ -2,7 +2,7 @@ import "./index.scss";
 import Image from "next/image";
 import bgImage1 from "@/../public/assets/images/BG_Pattern_1.png";
 import dashboard from "@/../public/assets/images/dashboard.png";
-import Button from "../button";
+import Button from "../Button";
 import { Josefin_Sans } from "next/font/google";
 
 type Props = {};

@@ -1,8 +1,8 @@
 import React from "react";
 import "./index.scss";
-import KeyCart from "../keyCart";
+import KeyCart from "../KeyCart";
 import { Inter, Josefin_Sans } from "next/font/google";
-import Button from "../button";
+import Button from "../Button";
 
 type Props = {};
 const inter = Inter({ subsets: ["latin"] });
