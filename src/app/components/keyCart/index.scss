@@ -24,7 +24,7 @@
     width: 330px;
     text-align: center;
 }
-.key-cart__para {
+.key-cart__description {
     color: $solid-white;
     padding: 0 13px;
     text-align: center;
@@ -34,4 +34,30 @@
     line-height: 24px;
     letter-spacing: 0.3px;
     width: 330px;
+}
+
+@media screen and (max-width: 428px) {
+    .key-cart {
+        gap: 32px;
+        width: 100%;
+    }
+    .key-cart__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    .key-cart__header {
+        font-size: 18px;
+        letter-spacing: 0.3px;
+        width: 330px;
+        text-align: center;
+    }
+    .key-cart__description {
+        padding: 0 13px;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.3px;
+        width: 80%;
+    }
 }

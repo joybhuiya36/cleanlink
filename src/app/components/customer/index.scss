@@ -47,6 +47,18 @@
 
 @media screen and (max-width: 428px) {
     .customer {
-        display: none;
+        padding: 100px 0;
+        gap: 40px;
+        width: 100%;
+    }
+    .customer__header__heading {
+        font-size: 22px;
+        line-height: 50px;
+    }
+    .customer__logos {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 35px;
+        justify-content: center;
     }
 }

@@ -15,7 +15,9 @@ const KeyCart = ({ header, description }: Props) => {
       <LaunchIcon />
       <div className="key-cart__text">
         <h3 className={`key-cart__header ${inter.className}`}>{header}</h3>
-        <p className={`key-cart__para ${inter.className}`}>{description}</p>
+        <p className={`key-cart__description ${inter.className}`}>
+          {description}
+        </p>
       </div>
     </div>
   );

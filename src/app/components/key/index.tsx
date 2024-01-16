@@ -22,7 +22,7 @@ const Key = ({ header, carts }: Props) => {
     <div className="key">
       <div className="key__header">
         <span className="key__header__title">{header.title}</span>
-        <div className="key__header__heading-description">
+        <div className="key__header__wrapper">
           <h2 className="key__header__heading">{header.heading}</h2>
           <p className="key__header__description">{header.description}</p>
         </div>

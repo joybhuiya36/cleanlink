@@ -116,3 +116,68 @@
     font-weight: 700;
     line-height: 18px;
 }
+
+@media screen and (max-width: 428px) {
+    .pricing-cart__body__cart {
+        padding: 35px 25px;
+        gap: 20px;
+        background: $gray-color;
+
+        &:hover {
+            padding: 50px 25px;
+        }
+    }
+    .pricing-cart__body__package {
+        gap: 15px;
+    }
+    .pricing-cart__body__packageName {
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .pricing-cart__premium {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    .pricing-cart__premium-text {
+        padding: 6px 8px;
+        border-radius: 4px;
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .pricing-cart__body__package-description {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .pricing-cart__line {
+        max-width: 250px;
+    }
+    .pricing-cart__price {
+        gap: 4px;
+    }
+    .pricing-cart__price-dollar {
+        font-size: 16px;
+        line-height: 32px;
+        letter-spacing: -0.24px;
+    }
+    .pricing-cart__price-usd {
+        font-size: 25px;
+        line-height: 48px;
+        letter-spacing: -0.4px;
+    }
+    .pricing-cart__price-description {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .pricing-cart__body__features {
+        width: 80%;
+        gap: 6px;
+    }
+    .pricing-cart__body__button {
+        padding: 10px 15px;
+        gap: 16px;
+        border-radius: 8px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+}

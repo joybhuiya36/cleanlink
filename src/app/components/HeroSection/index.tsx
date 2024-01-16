@@ -35,9 +35,10 @@ const HeroSection = ({ header, button, images }: heroType) => {
         <div className="hero__header">
           <span className="hero__title">{header.title}</span>
           <h1 className="hero__heading">
-            {header.heading1}
-            <br />
-            <span className="hero--hypen">–</span> {header.heading2}
+            <div>{header.heading1}</div>
+            <div className="hero__heading__with-hypen">
+              <span className="hero--hypen">–</span> {header.heading2}
+            </div>
           </h1>
         </div>
         <div>

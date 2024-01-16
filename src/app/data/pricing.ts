@@ -20,7 +20,7 @@ export const pricingHeader = {
       priceDescription: "per person, per month",
       price: 99,
       facility: "lorem ipsum dummu text",
-      style: "",
+      style: "pricing--cart-mid"
     },
     {
       packageName: "Standard",

@@ -25,7 +25,7 @@ const FeatureCart = (props: Props) => {
           {props.header}
         </h3>
       </div>
-      <p className={`feature-cart__text ${inter.className}`}>
+      <p className={`feature-cart__description ${inter.className}`}>
         {props.description}
       </p>
     </div>

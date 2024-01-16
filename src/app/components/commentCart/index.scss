@@ -51,3 +51,35 @@
     font-weight: 400;
     line-height: 24px;
 }
+
+@media screen and (max-width: 428px) {
+    .comment-cart {
+        width: 60%;
+        padding: 24px 46px 0 46px;
+        border-radius: 12px;
+        background: #f5f6f8;
+        gap: 15px;
+    }
+    .comment-cart__wrapper {
+        height: 80px;
+    }
+    .comment-cart__comment {
+        width: 100%;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .comment-cart__name-picture {
+        gap: 24px;
+    }
+    .comment-cart__name-designation {
+        gap: 4px;
+    }
+    .comment-cart__name {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .comment-cart__designation {
+        font-size: 13px;
+        line-height: 24px;
+    }
+}

@@ -40,7 +40,7 @@
   font-weight: 700;
   line-height: 31.92px;
 }
-.feature-cart__text {
+.feature-cart__description {
   width: 310px;
   align-self: stretch;
   color: $solid-white;
@@ -48,4 +48,32 @@
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
+}
+
+@media screen and (max-width: 428px) {
+  .feature-cart {
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .feature-cart__header {
+    gap: 20px;
+  }
+  .feature-cart__icon {
+    padding: 5px 8px;
+    border-radius: 12px;
+    max-width: 30px;
+  }
+  .feature-cart__header-text {
+    width: 100%;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .feature-cart__description {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+  }
 }

@@ -21,8 +21,8 @@ const Integration = ({ header, logos }: integrationType) => {
   return (
     <div className="integration">
       <div className="integration__header">
-        <span className="integration__title">{header.title}</span>
-        <h2 className={`integration__text ${inter.className}`}>
+        <span className="integration__header__title">{header.title}</span>
+        <h2 className={`integration__header__heading ${inter.className}`}>
           {header.heading}
         </h2>
       </div>

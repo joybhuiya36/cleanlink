@@ -11,14 +11,14 @@ type Props = {
     heading: string;
     description: string;
   };
-  featureCart: {
+  carts: {
     icon: React.ComponentType<any>;
     header: string;
     description: string;
   }[];
 };
 
-const Feature = ({ header, featureCart }: Props) => {
+const Feature = ({ header, carts }: Props) => {
   return (
     <div className="feature">
       <div className="feature__content">
@@ -29,7 +29,7 @@ const Feature = ({ header, featureCart }: Props) => {
         </div>
       </div>
       <div className="feature__carts-wrapper">
-        {featureCart?.map((cart, idx) => (
+        {carts?.map((cart, idx) => (
           <FeatureCart
             key={idx}
             icon={cart.icon}

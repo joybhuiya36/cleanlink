@@ -42,7 +42,7 @@ export default function Home() {
         images={heroImages}
       />
       <Integration header={integrationHeader} logos={integrationLogos} />
-      <Feature header={featureHeader} featureCart={featureCart} />
+      <Feature header={featureHeader} carts={featureCart} />
       <Pricing header={pricingHeader} packageData={packageData} />
       <Key header={keyHeader} carts={keyCarts} />
       <Testimonial

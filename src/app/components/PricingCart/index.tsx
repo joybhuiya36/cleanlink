@@ -46,7 +46,13 @@ const PricingCart = ({
             {packageFor}
           </p>
         </div>
-        <Image src={line} alt="Line" width={276} height={2} />
+        <Image
+          src={line}
+          alt="Line"
+          width={276}
+          height={2}
+          className="pricing-cart__line"
+        />
         <div>
           <div className="pricing-cart__price">
             <span className="pricing-cart__price-dollar">$</span>
