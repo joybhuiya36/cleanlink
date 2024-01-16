@@ -13,7 +13,6 @@ type Props = {
 
 const Button = (props: Props) => {
   const [buttonIcon, setButtonIcon] = useState<any>(undefined);
-  console.log(props.icon);
   return (
     <button
       className={props?.className}

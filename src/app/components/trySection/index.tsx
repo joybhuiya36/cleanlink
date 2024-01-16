@@ -2,9 +2,14 @@ import React from "react";
 import Button from "../Button";
 import "./index.scss";
 
-type Props = {};
+type Props = {
+  text: string;
+  button: {
+    name: string;
+  };
+};
 
-const TrySection = (props: Props) => {
+const TrySection = ({ text, button }: Props) => {
   return (
     <div className="try">
       <div className="try__container">
@@ -14,9 +19,9 @@ const TrySection = (props: Props) => {
         <div className="try__container__wrapper">
           <div className="try__text">
             <span className="try__text-hypen">-</span>
-            <h3 className="try__text-line">Try for free!</h3>
+            <h3 className="try__text-line">{text}</h3>
           </div>
-          <Button name="Schedule a Demo" className="try__button" />
+          <Button name={button.name} className="try__button" />
         </div>
       </div>
     </div>

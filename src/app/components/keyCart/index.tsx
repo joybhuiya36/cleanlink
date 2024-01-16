@@ -6,18 +6,16 @@ import "./index.scss";
 
 type Props = {
   header: string;
+  description: string;
 };
 const inter = Inter({ subsets: ["latin"] });
-const KeyCart = ({ header }: Props) => {
+const KeyCart = ({ header, description }: Props) => {
   return (
     <div className="key-cart">
       <LaunchIcon />
       <div className="key-cart__text">
         <h3 className={`key-cart__header ${inter.className}`}>{header}</h3>
-        <p className={`key-cart__para ${inter.className}`}>
-          Increase online store conversion up to 25% with our online visual
-          merchandising interface.
-        </p>
+        <p className={`key-cart__para ${inter.className}`}>{description}</p>
       </div>
     </div>
   );

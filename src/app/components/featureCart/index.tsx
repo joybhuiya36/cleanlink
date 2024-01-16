@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 type Props = {
   icon: React.ComponentType<any>;
   header: string;
+  description: string;
 };
 const inter = Inter({ subsets: ["latin"] });
 const FeatureCart = (props: Props) => {
@@ -25,7 +26,7 @@ const FeatureCart = (props: Props) => {
         </h3>
       </div>
       <p className={`feature-cart__text ${inter.className}`}>
-        Monitor progress against your plans and address deviations faster.
+        {props.description}
       </p>
     </div>
   );

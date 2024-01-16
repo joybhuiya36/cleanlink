@@ -4,65 +4,49 @@ import "./index.scss";
 import { Josefin_Sans } from "next/font/google";
 import CommentCart from "../CommentCart";
 
-type Props = {};
+type Props = {
+  header: {
+    title: string;
+    heading: string;
+    description: string;
+  };
+  carts: {
+    name: string;
+    comment: string;
+    picture: string;
+    designation: string;
+  }[];
+  button: {
+    name: string;
+  };
+};
 const josefin_sans = Josefin_Sans({ subsets: ["latin"] });
-const Testimonial = (props: Props) => {
+const Testimonial = ({ header, carts, button }: Props) => {
   return (
     <div className="testimonial">
       <div className="testimonial__header">
-        <span className="testimonial__title">Testimonial</span>
+        <span className="testimonial__title">{header.title}</span>
         <div className="testimonial__header__text">
-          <h1 className="testimonial__header__heading">
-            What are Customers says
-          </h1>
-          <p className="testimonial__header__para">
-            Projectile helps you collaborate more smoothly and communicate
-            better. Projectile helps you collaborate more smoothly and
-            communicate better.
+          <h1 className="testimonial__header__heading">{header.heading}</h1>
+          <p className="testimonial__header__description">
+            {header.description}
           </p>
         </div>
       </div>
       <div className="testimonial__carts">
         <div className="testimonial__carts__gradient"></div>
-        <CommentCart
-          name="Danny Zebelski"
-          designation="CEO of Hurricane Tbk."
-          comment="“Chainlist is amazing stuff. I use it everyday and it helps me to maintain my sanity.”"
-          picture="/assets/images/pic1.png"
-        />
-        <CommentCart
-          name="Sandra Tilbe"
-          designation="CTO of Metagroup"
-          comment="“We love your product and are so glad we can help spread the news!”"
-          picture="/assets/images/pic1.png"
-        />
-        <CommentCart
-          name="Leonardo Bernadechi"
-          designation="Freelancer"
-          comment="“The best Project Management App is: Chainlist, I absolutely love them.”"
-          picture="/assets/images/pic1.png"
-        />
-        <CommentCart
-          name="Danny Zebelski"
-          designation="CEO of Hurricane Tbk."
-          comment="“Chainlist is amazing stuff. I use it everyday and it helps me to maintain my sanity.”"
-          picture="/assets/images/pic1.png"
-        />
-        <CommentCart
-          name="Sandra Tilbe"
-          designation="CTO of Metagroup"
-          comment="“We love your product and are so glad we can help spread the news!”"
-          picture="/assets/images/pic1.png"
-        />
-        <CommentCart
-          name="Leonardo Bernadechi"
-          designation="Freelancer"
-          comment="“The best Project Management App is: Chainlist, I absolutely love them.”"
-          picture="/assets/images/pic1.png"
-        />
+        {carts?.map((cart, idx) => (
+          <CommentCart
+            key={idx}
+            name={cart.name}
+            designation={cart.designation}
+            comment={cart.comment}
+            picture={cart.picture}
+          />
+        ))}
       </div>
       <Button
-        name="See all Reviews"
+        name={button.name}
         className={`testimonial__button ${josefin_sans}`}
       />
     </div>

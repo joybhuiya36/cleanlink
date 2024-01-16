@@ -1,26 +1,36 @@
 import React from "react";
 import "./index.scss";
 import Image from "next/image";
-import rotoshow from "@/../public/assets/images/rotashow.png";
-import waves from "@/../public/assets/images/waves.png";
-import travelers from "@/../public/assets/images/travelers.png";
-import goldlines from "@/../public/assets/images/goldlines.png";
 
-type Props = {};
+type Props = {
+  header: {
+    title: string;
+    heading: string;
+  };
+  logos: {
+    link: string;
+    name: string;
+    width: number;
+    height: number;
+  }[];
+};
 
-const Customer = (props: Props) => {
+const Customer = ({ header, logos }: Props) => {
   return (
     <div className="customer">
       <div className="customer_header">
-        <span className="customer__header__title">Testimonial</span>
-        <h2 className="customer__header__heading">Our Customers</h2>
+        <span className="customer__header__title">{header.title}</span>
+        <h2 className="customer__header__heading">{header.heading}</h2>
       </div>
       <div className="customer__logos">
-        <Image src={rotoshow} alt="" className="logo" />
-        <Image src={waves} alt="" />
-        <Image src={rotoshow} alt="" />
-        <Image src={travelers} alt="" />
-        <Image src={goldlines} alt="" />
+        {logos?.map((logo) => (
+          <Image
+            src={logo.link}
+            alt={logo.name}
+            width={logo.width}
+            height={logo.height}
+          />
+        ))}
       </div>
     </div>
   );

@@ -53,8 +53,8 @@ const Header = ({ menuItems, buttons, logo }: headerType) => {
       </div>
       <div className="nav__links">
         <div>
-          {menuItems.map((menuItem) => (
-            <Link href={menuItem.link} className="nav__link">
+          {menuItems.map((menuItem, idx) => (
+            <Link key={idx} href={menuItem.link} className="nav__link">
               {menuItem.item}
             </Link>
           ))}

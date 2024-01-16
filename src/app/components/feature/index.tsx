@@ -4,9 +4,6 @@ import FeatureCart from "../FeatureCart";
 import "./index.scss";
 import BGImage from "@/../public/assets/images/BG_Pattern_2.png";
 import Image from "next/image";
-import PenIcon from "../PenIcon";
-import CartIcon from "../CardIcon";
-import CircleIcon from "../CircleIcon";
 
 type Props = {
   header: {
@@ -14,9 +11,14 @@ type Props = {
     heading: string;
     description: string;
   };
+  featureCart: {
+    icon: React.ComponentType<any>;
+    header: string;
+    description: string;
+  }[];
 };
 
-const Feature = ({ header }: Props) => {
+const Feature = ({ header, featureCart }: Props) => {
   return (
     <div className="feature">
       <div className="feature__content">
@@ -27,12 +29,14 @@ const Feature = ({ header }: Props) => {
         </div>
       </div>
       <div className="feature__carts-wrapper">
-        <FeatureCart icon={PenIcon} header="Customer management" />
-        <FeatureCart icon={PenIcon} header="Scheduling" />
-        <FeatureCart icon={CartIcon} header="Quotes and estimates" />
-        <FeatureCart icon={CartIcon} header="Credit card payment" />
-        <FeatureCart icon={CircleIcon} header="Referrals and reviews" />
-        <FeatureCart icon={CircleIcon} header="Billing and invoicing" />
+        {featureCart?.map((cart, idx) => (
+          <FeatureCart
+            key={idx}
+            icon={cart.icon}
+            header={cart.header}
+            description={cart.description}
+          />
+        ))}
       </div>
       <Image src={BGImage} alt="BG Image" className="feature__bg" />
     </div>
