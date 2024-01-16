@@ -1,6 +1,9 @@
 @use "/src/app/styles/colors" as *;
 
 .footer {
+    width: 100%;
+}
+.footer__wrapper {
     display: flex;
     margin: 0 120px;
     padding-bottom: 30px;
@@ -64,7 +67,7 @@
     font-weight: 600;
     line-height: 40px;
 }
-.footer__about-us__para {
+.footer__about-us__description {
     width: 374px;
     color: $solid-white;
     font-size: 14px;
@@ -126,7 +129,9 @@
 }
 .footer__copyright {
     color: $solid-white;
+    text-align: center;
     margin: 0 auto;
+    padding-bottom: 20px;
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
@@ -135,6 +140,111 @@
 
 @media screen and (max-width: 428px) {
     .footer {
+        width: 100%;
+    }
+    .footer__wrapper {
+        display: flex;
+        margin: 0 auto;
+        padding: 0 0 20px 0;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0;
+    }
+    .footer__menu {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding: 0;
+        padding-left: 25px;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        align-self: center;
+        border-top: none;
+        border-bottom: none;
+    }
+    .footer__menu-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .footer__menu-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .footer__menu-name {
+        font-size: 12px;
+    }
+    .footer__details {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        gap: 30px;
+        align-items: flex-start;
+        align-self: stretch;
+        border-bottom: none;
+    }
+    .footer__about-us {
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .footer__logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .footer__about-us__logo-image {
+        width: 32px;
+        height: 33px;
+    }
+    .footer__about-us__logo-text {
+        font-size: 22px;
+        line-height: 40px;
+    }
+    .footer__about-us__description {
+        width: 100%;
+        font-size: 13px;
+        line-height: 20px;
+        text-align: justify;
+    }
+    .footer__question {
         display: none;
+    }
+    .footer__social-media {
+        display: flex;
+        width: 80px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+    .footer__social-media__text {
+        font-size: 14px;
+    }
+    .footer__social-media__logo {
+        gap: 6px;
+        align-items: center;
+    }
+    .footer__social-media__logo-image {
+        width: 15px;
+        height: 15px;
+    }
+    .footer__social-media__logo-text {
+        color: $solid-white;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .footer__copyright {
+        border-top: 1px solid rgba(255, 255, 255, 0.6);
+        padding-top: 6px;
+        font-size: 13px;
+        width: 80%;
     }
 }
