@@ -23,8 +23,9 @@ const Customer = ({ header, logos }: Props) => {
         <h2 className="customer__header__heading">{header.heading}</h2>
       </div>
       <div className="customer__logos">
-        {logos?.map((logo) => (
+        {logos?.map((logo, idx) => (
           <Image
+            key={idx}
             src={logo.link}
             alt={logo.name}
             width={logo.width}

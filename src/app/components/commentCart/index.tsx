@@ -1,4 +1,3 @@
-import { Inter } from "next/font/google";
 import Image from "next/image";
 import React from "react";
 import "./index.scss";
@@ -9,13 +8,12 @@ type Props = {
   picture: string;
   designation: string;
 };
-const inter = Inter({ subsets: ["latin"] });
 const CommentCart = ({ name, comment, picture, designation }: Props) => {
   return (
     <div className="comment-cart">
       <div className="comment-cart__wrapper">
         <div
-          className={`comment-cart__comment ${inter.className}`}
+          className={`comment-cart__comment`}
           style={{ fontStyle: "italic" }}
         >
           {comment}
@@ -25,12 +23,8 @@ const CommentCart = ({ name, comment, picture, designation }: Props) => {
       <div className="comment-cart__name-picture">
         <Image src={picture} alt="Profile Picture" width={60} height={60} />
         <div className="comment-cart__name-designation">
-          <span className={`comment-cart__name ${inter.className}`}>
-            {name}
-          </span>
-          <span className={`comment-cart__designation ${inter.className}`}>
-            {designation}
-          </span>
+          <span className={`comment-cart__name`}>{name}</span>
+          <span className={`comment-cart__designation`}>{designation}</span>
         </div>
       </div>
     </div>

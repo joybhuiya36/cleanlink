@@ -1,7 +1,6 @@
 import "./index.scss";
 import Image from "next/image";
 import Button from "../Button";
-import { Josefin_Sans } from "next/font/google";
 
 type heroType = {
   header: {
@@ -27,7 +26,7 @@ type heroType = {
     };
   };
 };
-const josefin_sans = Josefin_Sans({ subsets: ["latin"] });
+
 const HeroSection = ({ header, button, images }: heroType) => {
   return (
     <div className="hero">
@@ -46,7 +45,7 @@ const HeroSection = ({ header, button, images }: heroType) => {
         </div>
         <Button
           name={button.name}
-          className={`hero__button ${josefin_sans.className}`}
+          className={`hero__button`}
           icon={button.icon}
           width={20}
           height={20}

@@ -1,7 +1,6 @@
 import React from "react";
 import "./index.scss";
 import KeyCart from "../KeyCart";
-import { Inter, Josefin_Sans } from "next/font/google";
 import Button from "../Button";
 
 type Props = {
@@ -15,8 +14,7 @@ type Props = {
     description: string;
   }[];
 };
-const inter = Inter({ subsets: ["latin"] });
-const josefin_sans = Josefin_Sans({ subsets: ["latin"] });
+
 const Key = ({ header, carts }: Props) => {
   return (
     <div className="key">
@@ -37,12 +35,10 @@ const Key = ({ header, carts }: Props) => {
             />
           ))}
           <div className="key__carts__try">
-            <h4 className={`key__carts__try-text ${inter.className}`}>
-              Try for Free!
-            </h4>
+            <h4 className={`key__carts__try-text`}>Try for Free!</h4>
             <Button
               name="Schedule a Demo"
-              className={`key__carts__try-button ${josefin_sans.className}`}
+              className={`key__carts__try-button`}
             />
           </div>
         </div>

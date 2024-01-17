@@ -1,4 +1,4 @@
-@use "/src/app/styles/colors" as *;
+@use "/src/app/styles/index.scss" as *;
 
 .integration {
     display: flex;
@@ -33,6 +33,7 @@
 .integration__header__heading {
     color: $solid-white;
     text-align: center;
+    font-family: $inter;
     font-size: 40px;
     font-style: normal;
     font-weight: 700;

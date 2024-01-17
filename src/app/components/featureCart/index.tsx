@@ -1,14 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import "./index.scss";
-import { Inter } from "next/font/google";
 
 type Props = {
   icon: React.ComponentType<any>;
   header: string;
   description: string;
 };
-const inter = Inter({ subsets: ["latin"] });
 const FeatureCart = (props: Props) => {
   const [iconColor, setIconColor] = useState<string>("#fff");
   return (
@@ -21,13 +19,9 @@ const FeatureCart = (props: Props) => {
         <div className="feature-cart__icon">
           <props.icon color={iconColor} />
         </div>
-        <h3 className={`feature-cart__header-text ${inter.className}`}>
-          {props.header}
-        </h3>
+        <h3 className={`feature-cart__header-text`}>{props.header}</h3>
       </div>
-      <p className={`feature-cart__description ${inter.className}`}>
-        {props.description}
-      </p>
+      <p className={`feature-cart__description`}>{props.description}</p>
     </div>
   );
 };

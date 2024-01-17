@@ -1,4 +1,4 @@
-@use "./styles/colors" as *;
+@use "./styles/index.scss" as *;
 .main {
   display: flex;
   flex-direction: column;
@@ -6,4 +6,5 @@
   align-items: center;
   box-sizing: border-box;
   background-color: $dark-color;
+  font-family: $jost;
 }

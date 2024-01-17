@@ -1,5 +1,4 @@
 "use client";
-import { Josefin_Sans } from "next/font/google";
 import Image from "next/image";
 import React, { useState } from "react";
 import line from "@/../public/assets/images/line.png";
@@ -17,7 +16,6 @@ type Props = {
   style: string;
 };
 
-const josefin_sans = Josefin_Sans({ subsets: ["latin"] });
 const PricingCart = ({
   packageName,
   packageTag,
@@ -66,10 +64,7 @@ const PricingCart = ({
         <PackageFacility color={color} text={facility} />
         <PackageFacility color={color} text={facility} />
       </div>
-      <Button
-        name="Get Started"
-        className={`pricing-cart__body__button ${josefin_sans.className}`}
-      />
+      <Button name="Get Started" className={`pricing-cart__body__button`} />
     </div>
   );
 };

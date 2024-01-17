@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../Button";
 import "./index.scss";
-import { Josefin_Sans } from "next/font/google";
 import CommentCart from "../CommentCart";
 
 type Props = {
@@ -20,7 +19,6 @@ type Props = {
     name: string;
   };
 };
-const josefin_sans = Josefin_Sans({ subsets: ["latin"] });
 const Testimonial = ({ header, carts, button }: Props) => {
   return (
     <div className="testimonial">
@@ -45,10 +43,7 @@ const Testimonial = ({ header, carts, button }: Props) => {
           />
         ))}
       </div>
-      <Button
-        name={button.name}
-        className={`testimonial__button ${josefin_sans}`}
-      />
+      <Button name={button.name} className={`testimonial__button`} />
     </div>
   );
 };

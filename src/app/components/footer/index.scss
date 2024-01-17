@@ -1,4 +1,4 @@
-@use "/src/app/styles/colors" as *;
+@use "/src/app/styles/index.scss" as *;
 
 .footer {
     width: 100%;
@@ -109,6 +109,7 @@
 }
 .footer__social-media__text {
     color: $cooper-green;
+    font-family: $open_sans;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -132,6 +133,7 @@
     text-align: center;
     margin: 0 auto;
     padding-bottom: 20px;
+    font-family: $open_sans;
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
@@ -244,7 +246,7 @@
     .footer__copyright {
         border-top: 1px solid rgba(255, 255, 255, 0.6);
         padding-top: 6px;
-        font-size: 13px;
+        font-size: 12px;
         width: 80%;
     }
 }

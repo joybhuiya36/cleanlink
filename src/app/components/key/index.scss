@@ -1,4 +1,4 @@
-@use "/src/app/styles/colors" as *;
+@use "/src/app/styles/index.scss" as *;
 
 .key {
     display: flex;
@@ -87,6 +87,7 @@
     gap: 16px;
     align-self: stretch;
     color: $solid-white;
+    font-family: $inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -103,6 +104,7 @@
     border-radius: 8px;
     background: $cooper-green;
     border: none;
+    font-family: $josefin_sans;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;

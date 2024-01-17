@@ -1,4 +1,4 @@
-@use "/src/app/styles/colors" as *;
+@use "/src/app/styles/index.scss" as *;
 
 .key-cart {
     display: flex;
@@ -16,6 +16,7 @@
 }
 .key-cart__header {
     color: $solid-white;
+    font-family: $inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -28,6 +29,7 @@
     color: $solid-white;
     padding: 0 13px;
     text-align: center;
+    font-family: $inter;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;

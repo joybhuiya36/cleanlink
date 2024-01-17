@@ -1,4 +1,4 @@
-@use "/src/app/styles/colors" as *;
+@use "/src/app/styles/index.scss" as *;
 
 .comment-cart {
     width: 306px;
@@ -17,6 +17,7 @@
 .comment-cart__comment {
     max-width: 306px;
     color: $solid-black;
+    font-family: $inter;
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
@@ -39,6 +40,7 @@
 }
 .comment-cart__name {
     color: $solid-black;
+    font-family: $inter;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -46,6 +48,7 @@
 }
 .comment-cart__designation {
     color: #97989f;
+    font-family: $inter;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;

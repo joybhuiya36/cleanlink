@@ -2,7 +2,6 @@
 import styles from "./page.module.scss";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
-import { Jost } from "next/font/google";
 import Integration from "./components/Integration";
 import Feature from "./components/Feature";
 import Pricing from "./components/Pricing";
@@ -31,10 +30,9 @@ import {
   footerRightMenu,
 } from "./data/footer";
 
-const jost = Jost({ subsets: ["latin"] });
 export default function Home() {
   return (
-    <main className={`${styles.main} ${jost.className}`}>
+    <main className={styles.main}>
       <Header menuItems={menuItems} buttons={headerButtons} logo={logo} />
       <HeroSection
         header={heroHeader}

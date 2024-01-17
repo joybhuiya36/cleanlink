@@ -2,7 +2,6 @@ import Link from "next/link";
 import React from "react";
 import "./index.scss";
 import Image from "next/image";
-import { Open_Sans } from "next/font/google";
 
 type Props = {
   leftMenu: {
@@ -32,7 +31,7 @@ type Props = {
   };
   copyright: string;
 };
-const open_sans = Open_Sans({ subsets: ["latin"] });
+
 const Footer = ({ leftMenu, rightMenu, about, copyright }: Props) => {
   return (
     <div className="footer">
@@ -89,9 +88,7 @@ const Footer = ({ leftMenu, rightMenu, about, copyright }: Props) => {
             </div>
           </div>
           <div className="footer__social-media">
-            <h3 className={`footer__social-media__text ${open_sans.className}`}>
-              Follow us on
-            </h3>
+            <h3 className={`footer__social-media__text`}>Follow us on</h3>
             {about?.followItems.map((item, idx) => (
               <div key={idx} className="footer__social-media__logo">
                 <Image
@@ -109,7 +106,7 @@ const Footer = ({ leftMenu, rightMenu, about, copyright }: Props) => {
           </div>
         </div>
       </div>
-      <div className={`footer__copyright ${open_sans}`}>{copyright}</div>
+      <div className={`footer__copyright`}>{copyright}</div>
     </div>
   );
 };

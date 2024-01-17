@@ -1,4 +1,4 @@
-@use "/src/app/styles/colors" as *;
+@use "/src/app/styles/index.scss" as *;
 
 .testimonial {
     display: flex;
@@ -78,6 +78,7 @@
     background-color: $cooper-green;
     border: none;
     cursor: pointer;
+    font-family: $josefin_sans;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;

@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { Jost, Josefin_Sans } from "next/font/google";
 import "./index.scss";
 import Link from "next/link";
 import Button from "../Button";
@@ -23,8 +22,6 @@ type headerType = {
     text: string;
   };
 };
-const jost = Jost({ subsets: ["latin"] });
-const josefin_sans = Josefin_Sans({ subsets: ["latin"] });
 
 const Header = ({ menuItems, buttons, logo }: headerType) => {
   const [isModalOpen, setModalOpen] = useState<boolean>(false);
@@ -60,8 +57,8 @@ const Header = ({ menuItems, buttons, logo }: headerType) => {
           ))}
         </div>
         <div className="nav__button">
-          {buttons.map((button) => (
-            <Button name={button.name} className={button.style} />
+          {buttons.map((button, idx) => (
+            <Button key={idx} name={button.name} className={button.style} />
           ))}
         </div>
       </div>
