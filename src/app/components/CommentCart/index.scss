@@ -1,0 +1,88 @@
+@use "/src/app/styles/index.scss" as *;
+
+.comment-cart {
+    width: 306px;
+    height: 180px;
+    padding: 24px 46px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #f5f6f8;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.comment-cart__wrapper {
+    height: 80px;
+}
+.comment-cart__comment {
+    max-width: 306px;
+    color: $solid-black;
+    font-family: $inter;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 24px;
+}
+.comment-cart__line {
+    margin-top: 12px;
+    width: 84px;
+    height: 1px;
+    background: linear-gradient(90deg, #666 0%, rgba(102, 102, 102, 0) 93.75%);
+}
+.comment-cart__name-picture {
+    display: flex;
+    gap: 24px;
+}
+.comment-cart__name-designation {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.comment-cart__name {
+    color: $solid-black;
+    font-family: $inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+.comment-cart__designation {
+    color: #97989f;
+    font-family: $inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+@media screen and (max-width: 428px) {
+    .comment-cart {
+        width: 60%;
+        padding: 24px 46px 0 46px;
+        border-radius: 12px;
+        background: #f5f6f8;
+        gap: 15px;
+    }
+    .comment-cart__wrapper {
+        height: 80px;
+    }
+    .comment-cart__comment {
+        width: 100%;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .comment-cart__name-picture {
+        gap: 24px;
+    }
+    .comment-cart__name-designation {
+        gap: 4px;
+    }
+    .comment-cart__name {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .comment-cart__designation {
+        font-size: 13px;
+        line-height: 24px;
+    }
+}

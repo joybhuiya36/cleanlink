@@ -1,0 +1,118 @@
+@use "/src/app/styles/index.scss" as *;
+
+.feature {
+  display: flex;
+  padding: 100px 7%;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 20px;
+}
+.feature__content {
+  display: flex;
+  width: 370px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.feature__content__title {
+  display: flex;
+  padding: 5px 10px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 20px;
+  background: $cooper-green;
+  color: $solid-white;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+.feature__content__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  align-self: stretch;
+}
+.feature__content__header {
+  color: $solid-white;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px;
+  align-self: stretch;
+}
+.feature__content__description {
+  color: $solid-white;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32.04px;
+}
+.feature__carts-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+}
+.feature__bg {
+  position: absolute;
+  top: 1400px;
+  left: 0;
+}
+@media screen and (max-width: 428px) {
+  .feature {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 7%;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  .feature__content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .feature__content__title {
+    gap: 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  .feature__content__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+  }
+  .feature__content__header {
+    color: $solid-white;
+    font-size: 22px;
+    line-height: 25px;
+    align-self: stretch;
+  }
+  .feature__content__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .feature__carts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .feature__bg {
+    display: none;
+  }
+}

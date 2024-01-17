@@ -1,0 +1,64 @@
+@use "/src/app/styles/index.scss" as *;
+
+.customer {
+    display: flex;
+    padding: 100px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    width: 100%;
+}
+.customer_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+.customer__header__title {
+    display: flex;
+    padding: 5px 10px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 20px;
+    background: $cooper-green;
+    color: $solid-white;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+.customer__header__heading {
+    color: $solid-white;
+    text-align: center;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50px;
+}
+.customer__logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1110px;
+}
+
+@media screen and (max-width: 428px) {
+    .customer {
+        padding: 100px 0;
+        gap: 40px;
+        width: 100%;
+    }
+    .customer__header__heading {
+        font-size: 22px;
+        line-height: 50px;
+    }
+    .customer__logos {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 35px;
+        justify-content: center;
+    }
+}
