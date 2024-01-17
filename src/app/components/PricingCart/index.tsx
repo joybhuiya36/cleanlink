@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import line from "@/../public/assets/images/line.png";
 import Button from "../Button";
-import { PackageFacility } from "../packageFacility";
+import { PackageFacility } from "../PackageFacility";
 import "./index.scss";
 
 type Props = {
