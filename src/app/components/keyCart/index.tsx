@@ -1,6 +1,5 @@
-import Image from "next/image";
 import React from "react";
-import LaunchIcon from "../LaunchIcon";
+import LaunchIcon from "../LaunchIcon/index";
 import "./index.scss";
 
 type Props = {

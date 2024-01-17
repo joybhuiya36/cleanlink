@@ -2,8 +2,7 @@ import React from "react";
 import Link from "next/link";
 import "./index.scss";
 import { IoClose } from "react-icons/io5";
-
-import Button from "../Button";
+import Button from "../Button/index";
 
 type Props = {
   closeModal: () => void;

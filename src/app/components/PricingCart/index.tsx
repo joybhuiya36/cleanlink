@@ -2,8 +2,8 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import line from "@/../public/assets/images/line.png";
-import Button from "../Button";
-import { PackageFacility } from "../packageFacility";
+import Button from "../Button/index";
+import { PackageFacility } from "../packageFacility/index";
 import "./index.scss";
 
 type Props = {

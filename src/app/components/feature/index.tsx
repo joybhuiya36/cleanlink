@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import FeatureCart from "../FeatureCart";
+import FeatureCart from "../FeatureCart/index";
 import "./index.scss";
 import BGImage from "@/../public/assets/images/BG_Pattern_2.png";
 import Image from "next/image";

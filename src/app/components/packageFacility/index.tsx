@@ -1,4 +1,4 @@
-import Icon from "../TickIcon";
+import Icon from "../TickIcon/index";
 import "./index.scss";
 
 type Props = {

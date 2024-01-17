@@ -1,6 +1,6 @@
 import "./index.scss";
 import Image from "next/image";
-import Button from "../Button";
+import Button from "../Button/index";
 
 type heroType = {
   header: {
