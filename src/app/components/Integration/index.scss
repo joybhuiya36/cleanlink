@@ -41,6 +41,8 @@
 }
 .integration__logos {
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
     justify-content: space-between;
     align-items: flex-start;
     align-self: stretch;

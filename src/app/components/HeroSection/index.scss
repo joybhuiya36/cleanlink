@@ -17,8 +17,8 @@
 .hero__bg2 {
   z-index: 1;
   margin-left: 71px;
-  width: 569px;
-  height: 327px;
+  width: 48.6%;
+  height: auto;
 }
 .hero__content {
   display: flex;
@@ -124,9 +124,8 @@
   }
   .hero__bg2 {
     margin: 50px 0;
-    max-width: 80vw;
-    max-height: 180px;
-    object-fit: contain;
+    width: 80%;
+    height: auto;
   }
   .hero__content {
     display: flex;

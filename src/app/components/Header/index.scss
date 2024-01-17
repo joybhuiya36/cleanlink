@@ -5,7 +5,7 @@
     padding: 30px, 135px, 30px, 135px;
     display: flex;
     justify-content: space-between;
-    gap: 480.19px;
+    gap: 35.2vw;
     z-index: 10;
 }
 .nav__menu-bar-mobile {
@@ -25,10 +25,15 @@
 .nav__links {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 3vw;
+}
+.nav__links__wrapper {
+    display: flex;
+    gap: 3.5vw;
+    flex-wrap: wrap;
 }
 .nav__link {
-    margin-left: 40px;
+    // margin-left: 3.3vw;
     text-decoration: none;
     color: $solid-white;
     font-size: 14px;

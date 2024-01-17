@@ -49,7 +49,7 @@ const Header = ({ menuItems, buttons, logo }: headerType) => {
         </div>
       </div>
       <div className="nav__links">
-        <div>
+        <div className="nav__links__wrapper">
           {menuItems.map((menuItem, idx) => (
             <Link key={idx} href={menuItem.link} className="nav__link">
               {menuItem.item}

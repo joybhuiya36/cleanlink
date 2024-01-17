@@ -3,6 +3,7 @@
 .customer {
     display: flex;
     padding: 100px 0;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     gap: 40px;
@@ -40,9 +41,11 @@
 }
 .customer__logos {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 1110px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6.5vw;
+    width: 100%;
 }
 
 @media screen and (max-width: 428px) {

@@ -23,7 +23,9 @@
 }
 .try__container {
     position: relative;
-    width: 1100px;
+    display: flex;
+    justify-content: center;
+    width: 80.5vw;
     height: 175px;
     border-radius: 8px;
     background: $cooper-green;
@@ -33,9 +35,8 @@
     z-index: 2;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 500px;
-    width: 1100px;
+    justify-content: center;
+    gap: 36.5vw;
     height: 175px;
 }
 .try__text {
