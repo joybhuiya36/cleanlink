@@ -2,7 +2,7 @@
 
 .feature {
   display: flex;
-  padding: 100px 7%;
+  padding: 100px 6%;
   align-items: flex-start;
   justify-content: center;
   margin: 0 auto;
@@ -64,7 +64,7 @@
   top: 1400px;
   left: 0;
 }
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 750px) {
   .feature {
     display: flex;
     flex-direction: column;

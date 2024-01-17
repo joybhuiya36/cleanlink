@@ -3,6 +3,7 @@
 .feature-cart {
   display: flex;
   padding: 30px;
+  max-width: 300px;
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
@@ -33,7 +34,7 @@
   background: $cooper-green;
 }
 .feature-cart__header-text {
-  width: 216px;
+  max-width: 216px;
   color: $solid-white;
   font-family: $inter;
   font-size: 24px;
@@ -42,7 +43,7 @@
   line-height: 31.92px;
 }
 .feature-cart__description {
-  width: 310px;
+  max-width: 310px;
   align-self: stretch;
   color: $solid-white;
   font-family: $inter;
@@ -52,7 +53,7 @@
   line-height: 24px;
 }
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 750px) {
   .feature-cart {
     display: flex;
     width: 70%;

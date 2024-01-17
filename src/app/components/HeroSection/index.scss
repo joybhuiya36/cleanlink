@@ -107,7 +107,7 @@
   }
 }
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 750px) {
   .hero {
     color: $solid-white;
     display: flex;
@@ -116,8 +116,8 @@
     align-items: center;
   }
   .hero__bg1 {
-    max-width: 80%;
-    max-height: 80%;
+    width: 80%;
+    height: auto;
     position: absolute;
     right: 0px;
     top: 0;

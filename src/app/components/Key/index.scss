@@ -71,6 +71,7 @@
 .key__carts__try {
     display: flex;
     padding: 0 30px;
+    height: 278px;
     width: 256px;
     flex-direction: column;
     justify-content: center;
@@ -115,7 +116,7 @@
         box-shadow: 0px 10px 60px 0px rgba(57, 131, 120, 0.5);
     }
 }
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 750px) {
     .key {
         padding: 70px 0;
         gap: 60px;
