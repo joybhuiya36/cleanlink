@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.scss";
-import PricingCart from "../PricingCart/index";
+import PricingCart from "../PricingCart";
 
 type Props = {
   header: {

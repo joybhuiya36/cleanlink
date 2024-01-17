@@ -1,5 +1,5 @@
 import React from "react";
-import LaunchIcon from "../LaunchIcon/index";
+import LaunchIcon from "../LaunchIcon";
 import "./index.scss";
 
 type Props = {

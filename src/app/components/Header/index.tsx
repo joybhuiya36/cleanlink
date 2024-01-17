@@ -2,9 +2,9 @@
 import Image from "next/image";
 import "./index.scss";
 import Link from "next/link";
-import Button from "../Button/index";
+import Button from "../Button";
 import { IoMdMenu } from "react-icons/io";
-import MenuModal from "../MenuModal/index";
+import MenuModal from "../MenuModal";
 import { useState } from "react";
 
 type headerType = {

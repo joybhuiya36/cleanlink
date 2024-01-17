@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
-import KeyCart from "../KeyCart/index";
-import Button from "../Button/index";
+import KeyCart from "../KeyCart";
+import Button from "../Button";
 
 type Props = {
   header: {

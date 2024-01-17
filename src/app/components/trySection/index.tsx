@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Button/index";
+import Button from "../Button";
 import "./index.scss";
 
 type Props = {
