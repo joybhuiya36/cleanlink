@@ -29,10 +29,12 @@ import {
   footerLeftMenu,
   footerRightMenu,
 } from "./data/footer";
+import { Jost } from "next/font/google";
 
+const jost = Jost({ subsets: ["latin"], display: "swap" });
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main className={`${styles.main} ${jost.className}`}>
       <Header menuItems={menuItems} buttons={headerButtons} logo={logo} />
       <HeroSection
         header={heroHeader}
