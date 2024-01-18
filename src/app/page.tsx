@@ -34,7 +34,7 @@ import { Jost } from "next/font/google";
 const jost = Jost({ subsets: ["latin"], display: "swap" });
 export default function Home() {
   return (
-    <main className={`${styles.main} ${jost.className}`}>
+    <main className={`${styles.main}`}>
       <Header menuItems={menuItems} buttons={headerButtons} logo={logo} />
       <HeroSection
         header={heroHeader}
