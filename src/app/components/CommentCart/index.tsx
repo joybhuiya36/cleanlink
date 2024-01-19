@@ -12,12 +12,7 @@ const CommentCart = ({ name, comment, picture, designation }: Props) => {
   return (
     <div className="comment-cart">
       <div className="comment-cart__wrapper">
-        <div
-          className={`comment-cart__comment`}
-          style={{ fontStyle: "italic" }}
-        >
-          {comment}
-        </div>
+        <div className={`comment-cart__comment`}>{comment}</div>
         <div className="comment-cart__line"></div>
       </div>
       <div className="comment-cart__name-picture">
